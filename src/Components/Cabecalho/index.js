@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
-import { Text, Image } from 'react-native';
+import { Text, Image, View } from 'react-native';
 import estilo from "./estilo.js"
 
 const Cabecalho = ({ idUsuario, nomeUsuario }) => {
     return (
-        <Fragment>
+        <View style={estilo.cabecalho}>
             <Image source={require("../../../res/img/alura.jpg")}
             style={estilo.fotoUsuario}/>
             <Text>{idUsuario} - {nomeUsuario}</Text>
-        </Fragment>
+        </View>
     );
 }
 
