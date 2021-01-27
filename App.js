@@ -19,7 +19,8 @@ const App = () => {
             <Cabecalho nomeUsuario={item.userName} 
             urlImage={item.userURL}/>
             <Foto urlFoto={item.url}  
-            descricao={item.description}/>
+            descricao={item.description}
+            qtdLikes={item.likes}/>
           </Fragment>}
       />
     </ScrollView>
