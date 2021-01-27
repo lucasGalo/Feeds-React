@@ -4,9 +4,14 @@ const largura = Dimensions.get("screen").width;
 
 const estilo = StyleSheet.create({
     imagem: {
-      width: largura,
-      height: largura
+        width: largura,
+        height: largura
+    },
+    like: {
+        width: 30,
+        height: 30,
+        margin: 5
     }
-  })
+})
 
-  export default estilo;
+export default estilo;
