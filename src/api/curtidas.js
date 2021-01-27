@@ -6,7 +6,7 @@ const imgLike = (curtiu) => {
     }
 }
 
-const curtirFoto = (curtiu, likes) => {
+const curtirFoto = (curtiu, likes) => {    
     let qnt = likes
     if (curtiu) {
         qnt--;
