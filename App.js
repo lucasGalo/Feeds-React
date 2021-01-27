@@ -20,8 +20,10 @@ const App = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) =>
           <Fragment>
-            <Cabecalho nomeUsuario={item.userName} />
-            <Foto />
+            <Cabecalho nomeUsuario={item.userName} 
+            urlImage={item.userURL}/>
+            <Foto urlFoto={item.url}  
+            descricao={item.description}/>
           </Fragment>}
       />
     </ScrollView>
