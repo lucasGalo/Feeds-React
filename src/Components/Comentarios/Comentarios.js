@@ -3,23 +3,38 @@ import { Text, FlatList, TextInput, Image, View, TouchableOpacity } from 'react-
 import estilo from '../Comentarios/estilo';
 
 const Comentarios = ({ comentarios }) => {
-  const [estComentario, setComentarios] = useState(comentarios)
+  const [estComentarios, setComentarios] = useState(comentarios)
+
   const adicionarComentario = () => {
     console.warn(conteudoCampoInput);
+    campoInput.clear();
+    const novoComentario = {
+      date: Date.now(),
+      text: conteudoCampoInput,
+      userName: "gabrielleitealura"
+    }
+
+    setComentarios([...estComentarios, novoComentario])
   }
 
+  let campoInput;
   let conteudoCampoInput = "";
 
   return (
     <Fragment>
       <FlatList
-        data={estComentario}
+        data={estComentarios}
         keyExtractor={(item, index) => index.id}
         renderItem={({ item }) =>
-          <Text>{item.text}</Text>}
+          <View style={estilo.naMesmaLinha}>
+            <Text>{item.userName}: </Text>
+            <Text>{item.text}</Text>
+          </View>
+        }
       />
       <View style={estilo.naMesmaLinha}>
         <TextInput
+          ref={textInput => campoInput = textInput}
           onChangeText={texto => conteudoCampoInput = texto}
           style={{ flex: 1 }}
           placeholder={"Deixe seu comentário..."}
