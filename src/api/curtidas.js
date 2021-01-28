@@ -6,14 +6,14 @@ const imgLike = (curtiu) => {
     }
 }
 
-const curtirFoto = (curtiu, likes) => {    
+const curtirFoto = (curtiu, likes) => {
     let qnt = likes
     if (curtiu) {
         qnt--;
     } else {
         qnt++;
-    }        
-   return [!curtiu, qnt];
+    }
+    return [!curtiu, qnt];
 }
 
-export {imgLike, curtirFoto}
+export { imgLike, curtirFoto }

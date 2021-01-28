@@ -4,14 +4,14 @@ import { curtirFoto, imgLike } from '../../api/curtidas';
 import estilo from './estilo';
 
 const Foto = ({ urlFoto, descricao, qtdLikes }) => {
-    console.log("qtdLikes: "+qtdLikes)
+    console.log("qtdLikes: " + qtdLikes)
     const [curtiu, setCurtiu] = useState(false);
     const [likes, setLikes] = useState(qtdLikes);
 
     const clicouCurtir = () => {
         const [novoEstCurtiu, qnt] = curtirFoto(curtiu, likes)
-       setLikes(qnt)
-       setCurtiu(novoEstCurtiu)
+        setLikes(qnt)
+        setCurtiu(novoEstCurtiu)
     }
     return (
         <Fragment>
