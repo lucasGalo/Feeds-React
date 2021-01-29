@@ -6,12 +6,14 @@ const Comentarios = ({ comentarios, adicionarComentario }) => {
   const [estComentarios, setComentarios] = useState(comentarios);
 
   const comentar = () => {
-    
+
     campoInput.clear();
-    const novoComentario = adicionarComentario (     
-     conteudoCampoInput,
-     "Lucas")     
-    setComentarios([...estComentarios, novoComentario])
+    if (conteudoCampoInput != "") {
+      const novoComentario = adicionarComentario(
+        conteudoCampoInput,
+        "Lucas")
+      setComentarios([...estComentarios, novoComentario])
+    }
   }
 
   let campoInput;
