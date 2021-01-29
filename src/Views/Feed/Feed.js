@@ -5,6 +5,7 @@ import { Foto } from '../../Components/Foto';
 import { Comentarios } from '../../Components/Comentarios';
 import lerFotos from '../../api/feed';
 import { curtirFoto, imgLike } from '../../api/curtidas';
+import adicionarComentario from '../../api/comentario';
 
 const Feed = () => {
     const [fotos, setFotos] = useState([]);
@@ -35,7 +36,8 @@ const Feed = () => {
                             imgLike={imgLike}
                             curtirFoto={curtirFoto} />
                         <Comentarios
-                            comentarios={item.comentarios} />
+                            comentarios={item.comentarios}
+                            adicionarComentario={adicionarComentario} />
                     </Fragment>}
             />
         </ScrollView>

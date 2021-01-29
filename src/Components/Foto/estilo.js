@@ -12,9 +12,9 @@ const estilo = StyleSheet.create({
         height: 30,
         margin: 5
     },
-    viewLike:{
-        flexDirection: "row",
-        alignItems: "center"
+    viewLike: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 })
 
