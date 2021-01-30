@@ -10,7 +10,7 @@ const estilo = StyleSheet.create({
         alignItems: "center"
     },
     inputs:{
-        width: largura*0.8,
+        width: largura,
         textAlign: 'center',
         marginTop: 40,
         fontSize: 15
