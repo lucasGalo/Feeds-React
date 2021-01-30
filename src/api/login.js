@@ -10,7 +10,7 @@ const efetuarLogin = async (usuario, senha) => {
             password: senha
         }),
         headers: {
-            "Content-type": "aplication/json"
+            "Content-type": "application/json"
         }
     }
     const resposta = await fetch(`http://${url}:3030/users/login`, cabecalhoHTTP);
