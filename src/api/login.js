@@ -9,7 +9,7 @@ const efetuarLogin = async (usuario, senha) => {
             userName: usuario,
             password: senha
         }),
-        header: {
+        headers: {
             "Content-type": "aplication/json"
         }
     }
@@ -20,8 +20,6 @@ const efetuarLogin = async (usuario, senha) => {
     }else{
         throw new Error("Não foi possivel logar");
     }
-    console.warn(resposta);
-
 }
 
 export default efetuarLogin;

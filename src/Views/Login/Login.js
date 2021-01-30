@@ -17,8 +17,8 @@ const Login = () => {
   }
 
   return (
-    <Fragment style={estilo.conteiner}>
-      <View>
+    <Fragment>
+      <View style={estilo.conteiner}>
         <TextInput
           style={estilo.inputs}
           placeholder="Usuário"
