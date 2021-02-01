@@ -13,7 +13,11 @@ const Login = () => {
     try {
       const token = await efetuarLogin(usuario, senha);
       await AsyncStorage.setItem("instalura_token", token) // armazenando dados na seção      
-      const t = await AsyncStorage.getItem("instalura_token")
+      const t = await AsyncStorage.getItem("instalura_token") // obtendo o token, no caso a variável.
+
+      //Ir para a tela de Feed
+
+      
       console.warn(t);
     } catch (erro) {
       setMensagemErro(erro.message);
