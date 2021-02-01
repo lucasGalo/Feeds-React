@@ -17,6 +17,7 @@ const efetuarLogin = async (usuario, senha) => {
 
     if(resposta.ok){
         // consegui logar
+        return resposta.headers.get("x-access-token");
     }else{
         throw new Error("Não foi possivel logar");
     }

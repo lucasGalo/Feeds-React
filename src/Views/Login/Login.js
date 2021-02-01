@@ -10,7 +10,8 @@ const Login = () => {
 
   const tentarLogar = async () => {
     try {
-      await efetuarLogin(usuario, senha);
+      const token = await efetuarLogin(usuario, senha);
+      console.warn(token);
     } catch (erro) {
       setMensagemErro(erro.message);
     }
