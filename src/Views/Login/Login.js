@@ -4,7 +4,7 @@ import { Text, TextInput, Button, View } from 'react-native';
 import efetuarLogin from '../../api/login.js';
 import estilo from './estilo.js'
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagemErro, setMensagemErro] = useState("");
@@ -16,8 +16,8 @@ const Login = () => {
       const t = await AsyncStorage.getItem("instalura_token") // obtendo o token, no caso a variável.
 
       //Ir para a tela de Feed
+        navigation.push("Feed");
 
-      
       console.warn(t);
     } catch (erro) {
       setMensagemErro(erro.message);
