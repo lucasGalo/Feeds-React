@@ -12,10 +12,7 @@ const Feed = () => {
     useEffect(() => {
         lerFotos(setFotos);
     }, [])
-    let altura = 0;
-    if (Platform.OS == "ios") {
-        altura = 35;
-    }
+    let altura = 0;   
     return (
         <ScrollView style={{ marginTop: altura }}>
             <StatusBar
