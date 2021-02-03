@@ -16,7 +16,7 @@ const Login = ({ navigation }) => {
       const t = await AsyncStorage.getItem("instalura_token") // obtendo o token, no caso a variável.
 
       //Ir para a tela de Feed
-        navigation.push("Feed");
+      navigation.push("Feed");
 
       console.warn(t);
     } catch (erro) {
@@ -47,4 +47,11 @@ const Login = ({ navigation }) => {
   )
 };
 
+Login.navigationOptions = () => {
+  const opcoes = {
+    title: "Login"
+  }
+
+  return opcoes;
+}
 export default Login;
