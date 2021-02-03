@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import React, { Fragment, useState } from 'react';
-import { Text, TextInput, Button, View } from 'react-native';
+import { Text, TextInput, Button, View, Platform } from 'react-native';
 import efetuarLogin from '../../api/login.js';
 import estilo from './estilo.js'
 
@@ -48,8 +48,12 @@ const Login = ({ navigation }) => {
 };
 
 Login.navigationOptions = () => {
+  // criando um objeto opcoes
   const opcoes = {
     title: "Login"
+  }
+  if(Platform.OS = "android"){
+    opcoes.header = null
   }
 
   return opcoes;
