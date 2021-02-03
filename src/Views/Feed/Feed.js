@@ -13,6 +13,7 @@ const Feed = () => {
         lerFotos(setFotos);
     }, [])
     let altura = 0;   
+
     return (
         <ScrollView style={{ marginTop: altura }}>
             <StatusBar
@@ -40,5 +41,18 @@ const Feed = () => {
         </ScrollView>
     )
 };
+
+Feed.navigationOptions = ({ navigation}) => {
+    // criando um objeto opcoes
+    const opcoes = {
+      title: navigation.getParam("nome")
+    }
+    /*
+    if(Platform.OS = "android"){
+      opcoes.header = null
+    }*/
+  
+    return opcoes;
+  }
 
 export default Feed;
